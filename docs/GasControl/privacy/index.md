@@ -1,5 +1,7 @@
 ---
 title: Gas Control — Privacy policy
+layout: privacy
+app: GasControl
 ---
 
 # Gas Control — Privacy policy

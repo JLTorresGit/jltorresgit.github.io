@@ -1,5 +1,7 @@
 ---
 title: Rota — Privacy policy
+layout: privacy
+app: Rota
 ---
 
 # Rota — Privacy policy

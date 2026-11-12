@@ -1,5 +1,7 @@
 ---
 title: Accounts Manager — Privacy policy
+layout: privacy
+app: AccountsManager
 ---
 
 # Accounts Manager — Privacy policy

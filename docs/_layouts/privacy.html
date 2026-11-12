@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{%- assign app = site.apps | where: "slug", page.app | first -%}
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="{{ '/' | relative_url }}">Apps</a>
+  {% if app %}<span>/</span><a href="{{ app.url | relative_url }}">{{ app.name }}</a>{% endif %}
+  <span>/</span><span aria-current="page">Privacy</span>
+</nav>
+<article class="prose policy">
+  {{ content }}
+</article>
+<script>
+  // "#es" jumps to the Spanish half of the policy (the second top-level heading).
+  if (location.hash === "#es") {
+    var h = document.querySelectorAll(".policy h1")[1];
+    if (h) h.scrollIntoView();
+  }
+</script>

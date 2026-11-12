@@ -1,0 +1,18 @@
+---
+title: Apps
+---
+<section class="hero">
+  <h1>Apps by {{ site.author }}</h1>
+  <p class="lead">Small, focused apps that keep your data on your device. No accounts, no ads, no tracking.</p>
+  <p class="lead lead-es" lang="es">Apps sencillas que guardan tus datos en tu dispositivo. Sin cuentas, sin anuncios, sin rastreo.</p>
+</section>
+
+<section id="apps" class="section">
+  <h2>Apps</h2>
+  <div class="grid">
+    {% assign apps = site.apps | sort: "order" %}
+    {% for app in apps %}
+      {% include app-card.html app=app %}
+    {% endfor %}
+  </div>
+</section>

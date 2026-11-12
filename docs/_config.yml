@@ -1,0 +1,32 @@
+# Site settings. GitHub Pages builds this folder (docs/) with Jekyll.
+title: JLTorres Apps
+author: JL Torres
+description: Apps I've built, with their details and privacy policies.
+url: https://jltorresgit.github.io
+baseurl: ""
+lang: en
+
+# Shown in the header, footer and support sections. Leave a value empty ("") to hide it.
+contact_email: jltorres@mexicomail.com
+github_username: JLTorresGit
+buy_me_a_coffee: ""   # e.g. https://buymeacoffee.com/your-name
+
+# One Markdown file per app in docs/_apps/ (copy templates/app.md from the repo root).
+collections:
+  apps:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: apps
+    values:
+      layout: app
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

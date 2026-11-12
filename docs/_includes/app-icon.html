@@ -1,0 +1,13 @@
+{%- comment -%}
+  App icon: the image in `icon` if set, otherwise a colored tile with the app's initials.
+  Usage: {% include app-icon.html app=app size="lg" %}   (size: md | lg)
+{%- endcomment -%}
+{%- assign a = include.app -%}
+{%- if a.icon and a.icon != "" -%}
+<img class="app-icon {{ include.size }}" src="{{ a.icon | relative_url }}" alt="{{ a.name }} icon">
+{%- else -%}
+{%- assign words = a.name | split: " " -%}
+<span class="app-icon {{ include.size }} app-icon-text" aria-hidden="true">
+  {%- for w in words limit: 2 -%}{{ w | slice: 0 }}{%- endfor -%}
+</span>
+{%- endif -%}

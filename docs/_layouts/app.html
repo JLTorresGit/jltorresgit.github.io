@@ -1,0 +1,83 @@
+---
+layout: default
+---
+{%- assign a = page -%}
+{%- assign privacy_url = a.url | append: 'privacy/' | relative_url -%}
+<article class="app-page" style="--app-color: {{ a.color | default: '#3b5bdb' }}">
+  <header class="app-hero">
+    {% include app-icon.html app=a size="lg" %}
+    <div class="app-hero-text">
+      <h1>{{ a.name }}</h1>
+      <p class="tagline">{{ a.tagline }}</p>
+      {% if a.tagline_es and a.tagline_es != "" %}<p class="tagline tagline-es" lang="es">{{ a.tagline_es }}</p>{% endif %}
+      <p class="badges">
+        {% if a.platform %}<span class="badge">{{ a.platform }}</span>{% endif %}
+        {% if a.status and a.status != "" %}<span class="badge badge-status">{{ a.status }}</span>{% endif %}
+        {% if a.version and a.version != "" %}<span class="badge">v{{ a.version }}</span>{% endif %}
+      </p>
+      <p class="actions">
+        {% if a.links.play_store and a.links.play_store != "" %}<a class="btn btn-primary" href="{{ a.links.play_store }}">Get it on Google Play</a>{% endif %}
+        {% if a.links.app_store and a.links.app_store != "" %}<a class="btn btn-primary" href="{{ a.links.app_store }}">Download on the App Store</a>{% endif %}
+        {% if a.links.download and a.links.download != "" %}<a class="btn btn-primary" href="{{ a.links.download }}">Download</a>{% endif %}
+        {% if a.links.source and a.links.source != "" %}<a class="btn" href="{{ a.links.source }}">Source code</a>{% endif %}
+        <a class="btn" href="{{ privacy_url }}">Privacy policy</a>
+      </p>
+    </div>
+  </header>
+
+  {% if a.highlights and a.highlights.size > 0 %}
+  <section class="section">
+    <h2>Privacy at a glance</h2>
+    <ul class="chips">
+      {% for h in a.highlights %}<li>{{ h }}</li>{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% assign body = content | strip %}
+  {% if body != "" %}
+  <section class="section prose">
+    {{ content }}
+  </section>
+  {% endif %}
+
+  {% if a.features and a.features.size > 0 %}
+  <section class="section">
+    <h2>Features</h2>
+    <div class="features">
+      {% for f in a.features %}
+      <div class="feature">
+        <h3>{{ f.title }}</h3>
+        <p>{{ f.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if a.screenshots and a.screenshots.size > 0 %}
+  <section class="section">
+    <h2>Screenshots</h2>
+    <div class="shots">
+      {% for s in a.screenshots %}<img src="{{ s | relative_url }}" alt="{{ a.name }} screenshot {{ forloop.index }}" loading="lazy">{% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if a.details and a.details.size > 0 %}
+  <section class="section">
+    <h2>Details</h2>
+    <dl class="details">
+      {% for d in a.details %}<div><dt>{{ d[0] }}</dt><dd>{{ d[1] }}</dd></div>{% endfor %}
+    </dl>
+  </section>
+  {% endif %}
+
+  <section class="section support">
+    <h2>Support</h2>
+    <p>Questions, ideas or a bug to report? Write to
+      <a href="mailto:{{ site.contact_email }}?subject={{ a.name | uri_escape }}">{{ site.contact_email }}</a>.
+      Privacy policy: <a href="{{ privacy_url }}" hreflang="en">English</a> ·
+      <a href="{{ privacy_url }}#es" hreflang="es">Español</a>.</p>
+  </section>
+</article>

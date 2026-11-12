@@ -1,0 +1,19 @@
+{%- assign a = include.app -%}
+<article class="card" style="--app-color: {{ a.color | default: '#3b5bdb' }}">
+  <div class="card-top">
+    {% include app-icon.html app=a size="md" %}
+    <div>
+      <h3 class="card-title"><a class="stretched" href="{{ a.url | relative_url }}">{{ a.name }}</a></h3>
+      <p class="badges">
+        {% if a.platform %}<span class="badge">{{ a.platform }}</span>{% endif %}
+        {% if a.status and a.status != "" %}<span class="badge badge-status">{{ a.status }}</span>{% endif %}
+      </p>
+    </div>
+  </div>
+  <p class="card-text">{{ a.tagline }}</p>
+  <p class="card-links">
+    <a href="{{ a.url | relative_url }}">Details</a>
+    <a href="{{ a.url | append: 'privacy/' | relative_url }}">Privacy policy</a>
+    {% if a.links.play_store and a.links.play_store != "" %}<a href="{{ a.links.play_store }}">Google Play</a>{% endif %}
+  </p>
+</article>

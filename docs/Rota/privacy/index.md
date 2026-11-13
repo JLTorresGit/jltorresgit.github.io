@@ -6,7 +6,7 @@ app: Rota
 
 # Rota — Privacy policy
 
-*Effective November 3, 2026* · [Español](#rota--política-de-privacidad)
+*Effective November 10, 2026* · [Español](#rota--política-de-privacidad)
 
 Rota is an Android app to keep track of how often you wear your clothes. It was made by one developer and works
 entirely on your phone.
@@ -18,7 +18,9 @@ Everything you enter stays **on your phone**, in the app's private storage:
 - your items (type, brand, description, group, tags, purchase date, status, notes) and their photos,
 - your catalog, outfits, logged uses and counter changes,
 - your settings (language and suggestion options),
-- automatic safety copies taken before a restore (the last three).
+- automatic safety copies taken before a restore (the last three),
+- if Rota closes unexpectedly, a crash report: the error, the app version and the phone model, nothing you entered.
+  It leaves the phone only if you choose **Send crash report** in About, which opens your own email app.
 
 Rota has **no account and no server**. Nothing you enter is sent to the developer or to anyone else.
 
@@ -66,7 +68,7 @@ Questions: [jltorres@mexicomail.com](mailto:jltorres@mexicomail.com)
 
 # Rota — Política de privacidad
 
-*Vigente desde el 3 de noviembre de 2026* · [English](#rota--privacy-policy)
+*Vigente desde el 10 de noviembre de 2026* · [English](#rota--privacy-policy)
 
 Rota es una app para Android que lleva la cuenta de cuántas veces usas tu ropa. La hizo un solo desarrollador y
 funciona por completo en tu teléfono.
@@ -78,7 +80,10 @@ Todo lo que capturas se queda **en tu teléfono**, en el almacenamiento privado 
 - tus prendas (tipo, marca, descripción, grupo, etiquetas, fecha de compra, estado, notas) y sus fotos,
 - tu catálogo, atuendos, usos registrados y cambios a los contadores,
 - tus ajustes (idioma y opciones de sugerencias),
-- las copias de seguridad automáticas que se hacen antes de una restauración (las últimas tres).
+- las copias de seguridad automáticas que se hacen antes de una restauración (las últimas tres),
+- si Rota se cierra inesperadamente, un reporte de error: el error, la versión de la app y el modelo del teléfono, nada
+  de lo que capturaste. Solo sale del teléfono si eliges **Enviar reporte de error** en Acerca de, que abre tu propia
+  app de correo.
 
 Rota **no tiene cuentas ni servidor**. Nada de lo que capturas se envía al desarrollador ni a nadie más.
 

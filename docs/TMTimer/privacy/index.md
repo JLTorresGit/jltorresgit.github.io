@@ -16,6 +16,7 @@ works entirely on your phone. It has no account, no ads and no analytics, and it
 Everything stays **on your phone**, in the app's private storage:
 
 - the participant list: each name with the date, time and color of their latest timed turn,
+- your grace-period setting (how far under or over time is still on time),
 - the address of the Bluetooth light you choose,
 - the current session's history, which is cleared when you close the app.
 
@@ -39,8 +40,8 @@ TM Timer asks for no other permissions.
 
 ## Backups
 
-- If backup is turned on for your phone, Android can include the participant list and the saved Bluetooth light in
-  your **Google account backup**, and move them to a new phone during a **device-to-device transfer**.
+- If backup is turned on for your phone, Android can include the participant list, your settings and the saved
+  Bluetooth light in your **Google account backup**, and move them to a new phone during a **device-to-device transfer**.
 - TM Timer makes no other copies.
 
 ## Your control
@@ -75,6 +76,7 @@ tus datos a ningún lado.
 Todo se queda **en tu teléfono**, en el almacenamiento privado de la app:
 
 - la lista de participantes: cada nombre con la fecha, el tiempo y el color de su última participación,
+- tu margen de tolerancia (cuánto se puede quedar corto o pasarse del tiempo),
 - la dirección del semáforo Bluetooth que elijas,
 - el historial de la sesión actual, que se borra al cerrar la app.
 
@@ -98,8 +100,8 @@ TM Timer no pide ningún otro permiso.
 
 ## Respaldos
 
-- Si el respaldo está activado en tu teléfono, Android puede incluir la lista de participantes y el semáforo
-  Bluetooth guardado en el **respaldo de tu cuenta de Google**, y pasarlos a un teléfono nuevo en una
+- Si el respaldo está activado en tu teléfono, Android puede incluir la lista de participantes, tus ajustes y el
+  semáforo Bluetooth guardado en el **respaldo de tu cuenta de Google**, y pasarlos a un teléfono nuevo en una
   **transferencia entre dispositivos**.
 - TM Timer no hace otras copias.
 
